@@ -39,11 +39,15 @@ public class Main {
             System.out.println(arr[i] + " ");
         }
         int minSumma = arr[0];
-        int maxSumma = 0;
+        int maxSumma = arr [0];
         for (int i = 0; i < arr.length; i++) {
-            if (arr[i] < minSumma) ;{
+            if (minSumma > arr[i]){
+                minSumma = arr[i];
+            }
+            if (maxSumma < arr[i]){
                 maxSumma = arr[i];
             }
+
         }
         System.out.println("Минимальная сумма затрат за день " + minSumma + " рублей");
         System.out.println("Максимальная сумма затрат за день " + maxSumma + " рублей");
@@ -51,7 +55,7 @@ public class Main {
     public static void task3(){
         int [] arr = generateRandomArray();
         for (int i = 0; i < arr.length; i++) {
-            System.out.println(arr[i] + " ");
+            System.out.println(i);
         }
         int totalSumm = 0;
         int kolDney = arr.length;
@@ -64,7 +68,7 @@ public class Main {
     public static void task4(){
         char[] reverseFullName = { 'n', 'a', 'v', 'I', ' ', 'v', 'o', 'n', 'a', 'v', 'I'};
         for (int i = 0; i < reverseFullName.length; i++) {
-            System.out.print(i);
+            System.out.print(reverseFullName[i]);
         }
         System.out.println( );
         for (int i = reverseFullName.length - 1; i >= 0; i -- ) {
